@@ -155,18 +155,90 @@
   .subscribers{
     margin-top: -12px;
   }
+  .views-videos{
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    color: #606060;
+    margin-top: -7px;
 
+  }
+  .customize-channel,
+  .manage-videos{
+    margin-left: 507px;
+    height: 36px;
+    width: 160.1px;
+    background-color: rgb(3, 94, 252);
+    color: white;
+    cursor:pointer;
+    border-radius: 20px;
+    border:none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .customize-channel:hover,
+  .manage-videos:hover{
+    background-color: rgb(3, 80, 252);
+  }
+  .manage-videos{
+    width: 133.75px;
+    margin-left: 3.5px;
+  }
+  .hamburger-menu{
+    height: 24px;
+    width: 24px;
+    padding-left: 28px;
+  }
+  .youtube-logo{
+    width: 90px;
+    height: 20px;
+    padding-left: 28px;
+    padding-right: 16px;
+  }
+  .search-bar{
+    height: 40px;
+    width: 540px;
+    margin-top:0px;
+    border-radius: 24px;
+    border-color: rgb(192, 192, 192);
+    border-style:solid;
+  .search-bar::placeholder{
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    
+  }
+
+
+
+  }
 
 
   </style>
 </head>
-<body>
+<body style="margin:0px;">
+    <div style="
+          display:flex;
+          flex-direction:row;
+          align-items: center;
+          width: 56px;">
+        <div style="
+            padding-top:18px;
+            padding-bottom:18px;">
+            <img class="hamburger-menu"src="static/hamburger-menu.svg">
+        </div>
+        <div>
+            <img class="youtube-logo" src="static/youtube-logo.svg">
+        </div>
+        <div>
+            <input class="search-bar" type="text" placeholder="Search">
+        </div>
+
+    </div>
     <div class="middle">
       <div style="
           display:flex;
           flex-direction:row;
           align-items: center; ">
-          <div >
+          <div>
               <img class="profile-picture"src="static/channels-profile.jpg">
           </div>
           <div style="
@@ -185,6 +257,17 @@
                       48.1K subscribers
                   </p>
               </div>
+
+          </div>
+          <div>
+              <button class="customize-channel">
+                  Customize channel
+              </button>
+          </div>
+          <div>
+              <button class="manage-videos">
+                  Manage videos
+              </button>
           </div>
       </div>
       <div style="
@@ -294,6 +377,9 @@
                       THINK YOU COULD PLAY AGAINST KYRIE IRVING?
                       WATCH HIM PLAY AGAINST RANDOM PEOPLE, FANS(MUST WATCH)
                   </p>
+                  <p class="views-videos">
+                      14M views &#183; 6 years ago
+                  </p>
               </div>
               <div style="
               display:flex;
@@ -302,6 +388,9 @@
                   <img class="img-pictures" src="static/picture2.webp">
                   <p class="titles">
                       Kyrie Irving - BEST PRACTICE MOMENTS(1on1, Breaking Ankles, Funny)
+                  </p>
+                  <p class="views-videos">
+                      4M views &#183; 5 years ago
                   </p>
               </div>
               <div style="
@@ -312,6 +401,9 @@
                   <p class="titles">
                       Nate Robinson and Shaq - FUNNIEST MOMENTS
                   </p>
+                  <p class="views-videos">
+                      3.4M views &#183; 5 years ago
+                  </p>
               </div>
               <div style="
               display:flex;
@@ -321,6 +413,9 @@
                   <p class="titles">
                       NBA Players vs Random People, Fans, Trash Talkers(UNSEEN)
                   </p>
+                  <p class="views-videos">
+                      2.8M views &#183; 4 years ago
+                  </p>
               </div>
               <div style="
               display:flex;
@@ -329,6 +424,9 @@
                   <img class="img-pictures" src="static/picture5.webp">
                   <p class="titles">
                       LeBron James, Russell Westbrook, Carmelo Anthony & Dwight Howard First Practice For New NBA Season
+                  </p>
+                  <p class="views-videos">
+                      758K views &#183; 1 year ago
                   </p>
               </div>
 

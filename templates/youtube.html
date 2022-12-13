@@ -66,52 +66,235 @@
     font-weight: 700;
     margin-top: -11px;
   }
+  .over-videos,
+  .play_all{
+    font-family: Roboto, Arial;
+    font-size: 16px;
+    color: #0F0F0F;
+    font-weight: 500;
+  }
+  .play{
+    height: 15px;
+    margin-left: 25px;
+    margin-top: 4px;
+  }
+  .play-all{
+    font-weight: 500;
+    margin-left: 12px;
+
+  }
+  .button{
+    height: 16px;
+    border-radius 10px;
+  }
+  .middle{
+    margin-left: 300px;
+    margin-top: 128px;
+  }
+  .img-pictures{
+    width: 210px;
+    border-radius: 10px;
+    padding-right: 4px;
+  }
+  .titles{
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #0F0F0F;
+    font-weight: 500;
+    margin-top: 5px;
+    width: 186px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 21px;
+    max-height: 48px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+  }
+  .home{
+    font-family:Roboto, Arial;
+    font-size; 14px;
+    color: #606060;
+    cursor: pointer;
+    padding-right: 32px;
+    padding-left: 32px;
+
+  }
+  .home:active{
+    color: #0F0F0F
+  }
+  .search{
+    width: 24px;
+    height: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 5px;
+  }
+
 
 
   </style>
 </head>
 <body>
+    <div class="middle">
+      <div style="
+      display:flex;
+      flex-direction:row;
+      align-items: center;">
+        <div>
+            <p class="home">HOME</p>
+        </div>
+        <div>
+            <p class="home">VIDEOS</p>
+        </div>
+        <div>
+            <p class="home">SHORTS</p>
+        </div>
+        <div>
+            <p class="home">PLAYLISTS</p>
+        </div>
+        <div>
+            <p class="home">COMMUNITY</p>
+        </div>
+        <div>
+            <p class="home">CHANNELS</p>
+        </div>
+        <div>
+            <p class="home">ABOUT</p>
+        </div>
+        <div>
+            <img class="search" src="static/search.svg">
+        </div>
 
-  <div style="
-  display:flex;
-  flex-direction:row;">
-    <div>
-      <img class="thumbnail" src="static/thumbnail.webp">
+
+      </div>
+      <div style="
+      display:flex;
+      flex-direction:row;
+      width: 1070px;
+      padding-top: 24px;
+      padding-bottom: 24px;">
+        <div>
+          <img class="thumbnail" src="static/thumbnail.webp">
+        </div>
+        <div class="text">
+          <p class="full-name">Robert Williams III of Boston Celtics IS FULLY BACK & PREPARED To Make His NBA Debut This Season
+          </p>
+            <div>
+                <p class="views">
+                    3,036 views &#183; 12 days ago
+                </p>
+            </div>
+            <div>
+                <p class="description">
+                    Boston Celtics' center Robert Williams is back and fully prepared
+                     to make his NBA debut this season after knee injury!
+                </p>
+            </div>
+            <div>
+                <p class="description_1">
+                    Leave a like on a video and subscribe to the channel for more
+                    NBA videos!
+                </p>
+            </div>
+            <div>
+                <p class="description_2">
+                    #nba #bostonceltics #basketball #nba2k23 #jaysontatum #lebronjames #stephencurry #kyrieirving
+                </p>
+            </div>
+            <div>
+                <p class="read-more">
+                    READ MORE
+                </p>
+            </div>
+
+        </div>
+
+      </div>
+      <div style="
+      display:flex;
+      flex-direction:column;">
+          <div style="
+          display:flex;
+          flex-direction:row;
+          align-items: center;">
+              <p class="over-videos">
+                  Popular videos
+              </p>
+              <div>
+                      <img class="play"src="static/play.png">
+              </div>
+              <div>
+                      <p class="play-all">
+                        Play all
+                      </p>
+              </div>
+          </div>
+          <div style="
+          display:flex;
+          flex-direction:row;
+          align-items: center;
+          width: 1070px">
+              <div style="
+              display:flex;
+              flex-direction:column;
+              align-items: left;">
+                  <img class="img-pictures" src="static/picture1.webp">
+                  <p class="titles">
+                      THINK YOU COULD PLAY AGAINST KYRIE IRVING?
+                      WATCH HIM PLAY AGAINST RANDOM PEOPLE, FANS(MUST WATCH)
+                  </p>
+              </div>
+              <div style="
+              display:flex;
+              flex-direction:column;
+              align-items: left;">
+                  <img class="img-pictures" src="static/picture2.webp">
+                  <p class="titles">
+                      Kyrie Irving - BEST PRACTICE MOMENTS(1on1, Breaking Ankles, Funny)
+                  </p>
+              </div>
+              <div style="
+              display:flex;
+              flex-direction:column;
+              align-items: left;">
+                  <img class="img-pictures" src="static/picture3.webp">
+                  <p class="titles">
+                      Nate Robinson and Shaq - FUNNIEST MOMENTS
+                  </p>
+              </div>
+              <div style="
+              display:flex;
+              flex-direction:column;
+              align-items: left;">
+                  <img class="img-pictures" src="static/picture4.webp">
+                  <p class="titles">
+                      NBA Players vs Random People, Fans, Trash Talkers(UNSEEN)
+                  </p>
+              </div>
+              <div style="
+              display:flex;
+              flex-direction:column;
+              align-items: left;">
+                  <img class="img-pictures" src="static/picture5.webp">
+                  <p class="titles">
+                      LeBron James, Russell Westbrook, Carmelo Anthony & Dwight Howard First Practice For New NBA Season
+                  </p>
+              </div>
+
+
+
+
+
+
+
+          </div>
+
+      </div>
     </div>
-    <div class="text">
-      <p class="full-name">Robert Williams III of Boston Celtics IS FULLY BACK & PREPARED To Make His NBA Debut This Season
-      </p>
-        <div>
-            <p class="views">
-                3,036 views &#183; 12 days ago
-            </p>
-        </div>
-        <div>
-            <p class="description">
-                Boston Celtics' center Robert Williams is back and fully prepared
-                 to make his NBA debut this season after knee injury!
-            </p>
-        </div>
-        <div>
-            <p class="description_1">
-                Leave a like on a video and subscribe to the channel for more
-                NBA videos!
-            </p>
-        </div>
-        <div>
-            <p class="description_2">
-                #nba #bostonceltics #basketball #nba2k23 #jaysontatum #lebronjames #stephencurry #kyrieirving
-            </p>
-        </div>
-        <div>
-            <p class="read-more">
-                READ MORE
-            </p>
-        </div>
 
-    </div>
 
-  </div>
 
 </body>
 </html>

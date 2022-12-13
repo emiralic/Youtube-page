@@ -131,6 +131,30 @@
     padding-right: 24px;
     padding-top: 5px;
   }
+  .profile-picture{
+    border-radius: 52px;
+    height: 80px;
+    width: 80px;
+  }
+  .the-ball-game{
+    font-family: Roboto, Arial;
+    font-size: 24px;
+    padding-bottom: 2.4px;
+    padding-left: 20px;
+    color: #0F0F0F;
+    margin-top:0;
+  }
+  .small-ball-game,
+  .subscribers{
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #606060;
+    padding-left: 20px;
+    margin-top: -25px;
+  }
+  .subscribers{
+    margin-top: -12px;
+  }
 
 
 
@@ -138,6 +162,31 @@
 </head>
 <body>
     <div class="middle">
+      <div style="
+          display:flex;
+          flex-direction:row;
+          align-items: center; ">
+          <div >
+              <img class="profile-picture"src="static/channels-profile.jpg">
+          </div>
+          <div style="
+          display:flex;
+          flex-direction:column;">
+              <p class="the-ball-game">
+                  The BallGame
+              </p>
+              <div>
+                  <p class="small-ball-game">
+                      @TheBallGame
+                  </p>
+              </div>
+              <div>
+                  <p class="subscribers">
+                      48.1K subscribers
+                  </p>
+              </div>
+          </div>
+      </div>
       <div style="
       display:flex;
       flex-direction:row;

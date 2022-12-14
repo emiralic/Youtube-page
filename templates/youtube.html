@@ -22,10 +22,21 @@
       white-space: nowrap;
       overflow: hidden;
       margin-top: 5px;
+      cursor:pointer;
 
-
-
-
+  }
+  .header{
+      display:flex;
+      flex-direction:row;
+      position:fixed;
+      background-color: white;
+      top:0;
+      left:0;
+      right:0;
+      border-bottom-width: 1px;
+      width: 56px;
+      padding-top: 8px;
+      z-index: 100;
   }
   .views{
       font-family: Roboto, Arial;
@@ -52,6 +63,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    cursor:pointer;
 
   }
   .text{
@@ -65,6 +77,7 @@
     font-size: 12px;
     font-weight: 700;
     margin-top: -11px;
+    cursor:pointer;
   }
   .over-videos,
   .play_all{
@@ -72,15 +85,18 @@
     font-size: 16px;
     color: #0F0F0F;
     font-weight: 500;
+    cursor:pointer;
   }
   .play{
     height: 15px;
     margin-left: 25px;
     margin-top: 4px;
+    cursor:pointer;
   }
   .play-all{
     font-weight: 500;
     margin-left: 12px;
+    cursor:pointer;
 
   }
   .button{
@@ -88,13 +104,17 @@
     border-radius 10px;
   }
   .middle{
-    margin-left: 300px;
+    margin-left: 348.7px;
+    margin-top: 72px;
+    margin-right: 104.7px;
+
 
   }
   .img-pictures{
     width: 210px;
     border-radius: 10px;
     padding-right: 4px;
+    cursor:pointer;
   }
   .titles{
     font-family: Roboto, Arial;
@@ -110,6 +130,7 @@
     max-height: 48px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    cursor:pointer;
 
   }
   .home{
@@ -122,14 +143,19 @@
 
   }
   .home:active{
-    color: #0F0F0F
+    color: #0F0F0F;
   }
+  .home:hover{
+    color: #0F0F0F;
+  }
+
   .search{
     width: 24px;
     height: 24px;
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 5px;
+    cursor:pointer;
   }
   .profile-picture{
     border-radius: 52px;
@@ -142,7 +168,7 @@
     padding-bottom: 2.4px;
     padding-left: 20px;
     color: #0F0F0F;
-    margin-top:0;
+    margin-top:5px ;
   }
   .small-ball-game,
   .subscribers{
@@ -160,6 +186,7 @@
     font-size: 12px;
     color: #606060;
     margin-top: -7px;
+    cursor:pointer;
 
   }
   .customize-channel,
@@ -174,6 +201,7 @@
     border:none;
     font-size: 15px;
     font-weight: 500;
+
   }
   .customize-channel:hover,
   .manage-videos:hover{
@@ -186,7 +214,7 @@
   .hamburger-button{
     width: 40px;
     height: 40px;
-    margin-left: 26px;
+    margin-left: 18px;
     background-color: white;
     border:none;
   }
@@ -213,7 +241,7 @@
     border-color: rgb(192, 192, 192);
     border-style:solid;
     position: center;
-    margin-left: 210px;
+    margin-left: 270px;
     border-width: 1px;
 
    }
@@ -264,7 +292,7 @@
     width: 24px;
     height: 24px;
     padding: 8px 8px 8px 8px;
-    margin-left: 320px;
+    margin-left: 260px;
     cursor: pointer;
 
   }
@@ -285,6 +313,73 @@
     cursor:pointer;
     margin-top: 4px;
   }
+  .home-image,
+  .your-videos-image,
+  .history-image,
+  .movies-image,
+  .watch-later-image,
+  .music-image{
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+
+  }
+  .home-button,
+  .library-button{
+    border:none;
+    height: 40px;
+    width: 180px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    background-color:white;
+    cursor:pointer;
+
+  }
+  .home-button:hover,
+  .library-button:hover{
+    border-radius: 20px;
+    background-color: rgb(240, 240, 240);
+  }
+  .home-text,
+  .history-text,
+  .your-videos-text,
+  .movies-text,
+  .watch-later-text,
+  .subs-text,
+  .music-text{
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #0F0F0F;
+  }
+  .library-button{
+    margin-top: 25px;
+  }
+  .your-videos-image,
+  .history-image,
+  .watch-later-image,
+  .movies-image{
+    width:20px;
+    height:20px;
+    margin-left:4px;
+  }
+
+  }
+  .movies-text{
+    margin-left: -6px;
+  }
+  .subs-text{
+    margin-left: 8px;
+    margin-top: 18px;
+  }
+  .music-image{
+    margin-left:4px;
+    border-radius:12px;
+  }
+  .music-text{
+    margin-left: -4px;
+  }
+
 
 
 
@@ -292,53 +387,144 @@
 
   </style>
 </head>
-<body style="margin:0px;">
+<body style="margin:0px;
+             padding-bottom: 1000px;">
     <div style="
-          display:flex;
-          flex-direction:row;
-          width: 56px;
-          padding-top: 8px;  ">
-        <div >
-            <button class="hamburger-button">
-                <img class="hamburger-menu"src="static/hamburger-menu.svg">
-            </button>
-
-        </div>
-        <div>
-            <img class="youtube-logo" src="static/youtube-logo.svg">
-        </div>
-        <div>
-            <input class="search-bar" type="text" placeholder="Search">
-        </div>
-        <div>
-            <button class="search-button">
-                <img class="search-image"src="static/search.svg">
-
+         display:flex;
+         position:fixed;
+         flex-direction:column;
+         width: 40px;
+         padding-left: 18px;
+         padding-right: 12px;
+         top:68px;
+         left:0;
+         right:0;">
+        <div class="first-column">
+            <button class="home-button">
+                <img class="home-image" src="static/home.svg">
+                <p class="home-text">Home</p>
             </button>
         </div>
         <div>
-            <button class="speaker-button">
-                <img class="speaker-icon" src="static/voice-search-icon.svg">
+            <button class="home-button">
+                <img class="home-image" src="static/youtube-shorts.svg">
+                <p class="home-text">Shorts</p>
             </button>
         </div>
         <div>
-            <img class="upload-icon"src="static/upload.svg">
+            <button class="home-button">
+                <img class="home-image" src="static/subscriptions.svg">
+                <p class="home-text">Subscriptions</p>
+            </button>
         </div>
         <div>
-            <img class="notification-icon" src="static/notifications.svg">
+            <button class="library-button">
+                <img class="home-image" src="static/library.svg">
+                <p class="home-text">Library</p>
+            </button>
         </div>
         <div>
-            <img class="right-profile-picture"src="/static/profile-picture.jpg">
+            <button class="home-button">
+                <img class="history-image" src="static/youtube-history.svg">
+                <p class="history-text">History</p>
+            </button>
+        </div>
+        <div>
+            <button class="home-button">
+                <img class="your-videos-image" src="static/your-videos.jpg">
+                <p class="your-videos-text">Your videos</p>
+            </button>
+        </div>
+        <div>
+            <button class="home-button">
+                <img class="movies-image" src="static/your-movies.png">
+                <p class="movies-text">Your movies</p>
+            </button>
+        </div>
+        <div>
+            <button class="home-button">
+                <img class="watch-later-image" src="static/watch-later.png">
+                <p class="watch-later-text">Watch later</p>
+            </button>
+        </div>
+        <div>
+            <button class="home-button">
+                <img class="home-image" src="static/down.svg">
+                <p class="home-text">Show more</p>
+            </button>
+        </div>
+        <div>
+                <p class="subs-text">Subscriptions</p>
+        </div>
+        <div>
+            <button class="home-button">
+                <img class="music-image" src="static/youtube-music.jpg">
+                <p class="music-text">Music</p>
+            </button>
+        </div>
+        <div>
+            <button class="home-button">
+                <img class="music-image" src="static/sports.jpg">
+                <p class="music-text">Sports</p>
+            </button>
+        </div>
+        <div>
+            <button class="home-button">
+                <img class="music-image" src="static/gaming.jpg">
+                <p class="music-text">Gaming</p>
+            </button>
+        </div>
+        <div>
+            <button class="home-button">
+                <img class="music-image" src="static/movies.jpg">
+                <p class="music-text">Movies</p>
+            </button>
         </div>
 
     </div>
-    <div class="middle" style="padding-top:16px;">
+    <div class="header">
+            <div>
+                <button class="hamburger-button">
+                    <img class="hamburger-menu" src="static/hamburger-menu.svg">
+                </button>
+
+            </div>
+            <div>
+                <img class="youtube-logo" src="static/youtube-logo.svg">
+            </div>
+            <div>
+                <input class="search-bar" type="text" placeholder="Search">
+            </div>
+            <div>
+                <button class="search-button">
+                    <img class="search-image" src="static/search.svg">
+
+                </button>
+            </div>
+            <div>
+                <button class="speaker-button">
+                    <img class="speaker-icon" src="static/voice-search-icon.svg">
+                </button>
+            </div>
+            <div>
+                <img class="upload-icon" src="static/upload.svg">
+            </div>
+            <div>
+                <img class="notification-icon" src="static/notifications.svg">
+            </div>
+            <div>
+                <img class="right-profile-picture" src="/static/profile-picture.jpg">
+            </div>
+
+    </div>
+    <div class="middle">
       <div style="
           display:flex;
           flex-direction:row;
-          align-items: center;">
+          align-items: center;
+          position:relative;">
           <div>
-              <img class="profile-picture"src="static/channels-profile.jpg">
+              <img class="profile-picture" src="static/channels-profile.jpg">
           </div>
           <div style="
           display:flex;
@@ -372,7 +558,9 @@
       <div style="
       display:flex;
       flex-direction:row;
-      align-items: center;">
+      align-items: center;
+      position:fixed;
+      background-color: white;">
         <div>
             <p class="home">HOME</p>
         </div>
@@ -404,7 +592,7 @@
       display:flex;
       flex-direction:row;
       width: 1070px;
-      padding-top: 24px;
+      padding-top: 72px;
       padding-bottom: 24px;">
         <div>
           <img class="thumbnail" src="static/thumbnail.webp">
@@ -454,7 +642,7 @@
                   Popular videos
               </p>
               <div>
-                      <img class="play"src="static/play.png">
+                      <img class="play" src="static/play.png">
               </div>
               <div>
                       <p class="play-all">

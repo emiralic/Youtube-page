@@ -28,15 +28,18 @@
   .header{
       display:flex;
       flex-direction:row;
+      width: 1519.2px;
       position:fixed;
       background-color: white;
       top:0;
       left:0;
       right:0;
       border-bottom-width: 1px;
-      width: 56px;
       padding-top: 8px;
-      z-index: 100;
+      border-bottom-width: 2px;
+      z-index:100;
+
+
   }
   .views{
       font-family: Roboto, Arial;
@@ -109,12 +112,106 @@
     margin-right: 104.7px;
 
 
+
   }
+  .picture{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    position:relative;
+  }
+  .picture-column{
+    display:flex;
+    flex-direction:column;
+  }
+  .home-videos-shorts{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    position:fixed;
+    background-color: white;
+    width: 1519.2px;
+    z-index: 100;
+
+  }
+  .video-title-description{
+      display:flex;
+      flex-direction:row;
+      width: 1070px;
+      padding-top: 72px;
+      padding-bottom: 24px;
+      position:relative;
+  }
+  .text-on-thumbnail{
+    font-family: Roboto, Arial;
+    font-size: 18px;
+    position: absolute;
+    bottom: 230px;
+    color: #EEEEEE;
+    left: 11px;
+    width: 348px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .youtube-button-thumbnail{
+    position: absolute;
+    width: 70px;
+    left: 170px;
+    bottom: 118px;
+  }
+   .popular-videos-row{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    width: 1070px;
+
+  }
+  .popular-videos-titles{
+    display:flex;
+    flex-direction:column;
+    align-items: left;
+    position:relative;
+  }
+  .popular-videos-text{
+      display:flex;
+      flex-direction:row;
+      align-items: center;
+  }
+  .popular-videos-text-row{
+      display:flex;
+      flex-direction:column;
+  }
+  .page-left-side{
+     display:flex;
+     position:fixed;
+     flex-direction:column;
+     width: 40px;
+     padding-left: 18px;
+     padding-right: 12px;
+     top:68px;
+     left:0;
+     right:0;
+  }
+
   .img-pictures{
     width: 210px;
     border-radius: 10px;
     padding-right: 4px;
     cursor:pointer;
+  }
+  .video-time{
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    position:absolute;
+    bottom: 88px;
+    right: 9px;
+    border-radius: 5px;
+    padding: 2px 4px 2px 4px;
+
+
   }
   .titles{
     font-family: Roboto, Arial;
@@ -273,7 +370,24 @@
     border-bottom-right-radius: 20px;
     border-style: solid;
     cursor: pointer;
+    position:relative;
 
+  }
+  .search-button .search-black-text{
+    position: absolute;
+    bottom: -50px;
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    background-color: rgb(102, 102, 102);
+    color: white;
+    border-radius: 4px;
+    padding: 8px 8px 8px 8px;
+    opacity:0;
+    pointer-events:none;
+
+  }
+  .search-button:hover .search-black-text{
+    opacity:1;
   }
   .search-button:hover{
     background-color: rgb(248, 248, 248);
@@ -293,6 +407,24 @@
     border: none;
     background-color: rgb(250, 250, 250);
     cursor: pointer;
+    position: relative;
+  }
+  .speaker-button .voice-black-text{
+    position: absolute;
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    bottom: -50px;
+    background-color: rgb(102, 102, 102);
+    border-radius: 4px;
+    color: white;
+    padding: 8px 8px 8px 8px;
+    opacity:0;
+    pointer-events:none;
+    white-space: nowrap;
+    left: -40px;
+  }
+  .speaker-button:hover .voice-black-text{
+    opacity: 1;
   }
   .speaker-icon{
     width: 25px;
@@ -404,16 +536,7 @@
 </head>
 <body style="margin:0px;
              padding-bottom: 1000px;">
-    <div style="
-         display:flex;
-         position:fixed;
-         flex-direction:column;
-         width: 40px;
-         padding-left: 18px;
-         padding-right: 12px;
-         top:68px;
-         left:0;
-         right:0;">
+    <div class="page-left-side">
         <div class="first-column">
             <a class="underline" href="https://www.youtube.com">
             <button class="home-button">
@@ -493,6 +616,7 @@
                 <img class="music-image" src="static/youtube-music.jpg">
                 <p class="music-text">Music</p>
             </button>
+            </a>
         </div>
         <div>
             <a class="underline" href="https://www.youtube.com/sports">
@@ -500,6 +624,7 @@
                 <img class="music-image" src="static/sports.jpg">
                 <p class="music-text">Sports</p>
             </button>
+            </a>
         </div>
         <div>
             <a class="underline" href="https://www.youtube.com/gaming">
@@ -507,6 +632,7 @@
                 <img class="music-image" src="static/gaming.jpg">
                 <p class="music-text">Gaming</p>
             </button>
+            </a>
         </div>
         <div>
             <a class="underline" href="https://www.youtube.com/movies">
@@ -522,7 +648,7 @@
 
     </div>
     <div class="header">
-            <div>
+            <div style="background-color: white;">
                 <button class="hamburger-button">
                     <img class="hamburger-menu" src="static/hamburger-menu.svg">
                 </button>
@@ -539,16 +665,22 @@
             <div>
                 <button class="search-button">
                     <img class="search-image" src="static/search.svg">
-
+                    <div class="search-black-text">
+                        Search
+                    </div>
                 </button>
             </div>
             <div>
                 <button class="speaker-button">
                     <img class="speaker-icon" src="static/voice-search-icon.svg">
+                    <div class="voice-black-text">
+                        Search with your voice
+                    </div>
                 </button>
             </div>
             <div>
                 <img class="upload-icon" src="static/upload.svg">
+
             </div>
             <div>
                 <img class="notification-icon" src="static/notifications.svg">
@@ -559,17 +691,11 @@
 
     </div>
     <div class="middle">
-      <div style="
-          display:flex;
-          flex-direction:row;
-          align-items: center;
-          position:relative;">
+      <div class="picture">
           <div>
               <img class="profile-picture" src="static/channels-profile.jpg">
           </div>
-          <div style="
-          display:flex;
-          flex-direction:column;">
+          <div class="picture-column">
               <p class="the-ball-game">
                   The BallGame
               </p>
@@ -596,12 +722,7 @@
               </button>
           </div>
       </div>
-      <div style="
-      display:flex;
-      flex-direction:row;
-      align-items: center;
-      position:fixed;
-      background-color: white;">
+      <div class="home-videos-shorts">
         <div>
             <a class="underline" href="https://www.youtube.com/c/theballgame">
             <p class="home">HOME</p>
@@ -643,14 +764,17 @@
 
 
       </div>
-      <div style="
-      display:flex;
-      flex-direction:row;
-      width: 1070px;
-      padding-top: 72px;
-      padding-bottom: 24px;">
+      <div class="video-title-description">
         <div>
           <img class="thumbnail" src="static/thumbnail.webp">
+            <a class="underline" href="https://www.youtube.com/watch?v=IiEzjbbB7_8">
+            <div class="text-on-thumbnail">
+                Robert Williams III of Boston Celtics IS FULLY BACK & PREPARED To Make
+            </div>
+            <div>
+                <img class="youtube-button-thumbnail" src="static/youtube-button-thumbnail.png">
+            </div>
+            </a>
         </div>
         <div class="text">
           <a class="underline" href="https://www.youtube.com/watch?v=IiEzjbbB7_8">
@@ -690,13 +814,8 @@
         </div>
 
       </div>
-      <div style="
-      display:flex;
-      flex-direction:column;">
-          <div style="
-          display:flex;
-          flex-direction:row;
-          align-items: center;">
+      <div class="popular-videos-text-row">
+          <div class="popular-videos-text">
               <a class="underline" href="https://www.youtube.com/@TheBallGame/videos?view=0&sort=p&shelf_id=0">
               <p class="over-videos">
                   Popular videos
@@ -713,17 +832,14 @@
                   </a>
               </div>
           </div>
-          <div style="
-          display:flex;
-          flex-direction:row;
-          align-items: center;
-          width: 1070px">
-              <div style="
-              display:flex;
-              flex-direction:column;
-              align-items: left;">
+          <div class="popular-videos-row">
+              <div class="popular-videos-titles">
                   <a class="underline" href="https://www.youtube.com/watch?v=a0y13k6_dU8">
                   <img class="img-pictures" src="static/picture1.webp">
+                  <div class="video-time">
+                      7:48
+                  </div>
+
                   <p class="titles">
                       THINK YOU COULD PLAY AGAINST KYRIE IRVING?
                       WATCH HIM PLAY AGAINST RANDOM PEOPLE, FANS(MUST WATCH)
@@ -734,12 +850,12 @@
                   </p>
                   </a>
               </div>
-              <div style="
-              display:flex;
-              flex-direction:column;
-              align-items: left;">
+              <div class="popular-videos-titles">
                   <a class="underline" href="https://www.youtube.com/watch?v=L3r6URIyFgo">
                   <img class="img-pictures" src="static/picture2.webp">
+                      <div class="video-time">
+                      8:04
+                      </div>
                   <p class="titles">
                       Kyrie Irving - BEST PRACTICE MOMENTS(1on1, Breaking Ankles, Funny)
                   </p>
@@ -748,12 +864,12 @@
                   </p>
                   </a>
               </div>
-              <div style="
-              display:flex;
-              flex-direction:column;
-              align-items: left;">
+              <div class="popular-videos-titles">
                   <a class="underline" href="https://www.youtube.com/watch?v=DZGIuVcblG4">
                   <img class="img-pictures" src="static/picture3.webp">
+                      <div class="video-time">
+                      6:04
+                      </div>
                   <p class="titles">
                       Nate Robinson and Shaq - FUNNIEST MOMENTS
                   </p>
@@ -762,12 +878,12 @@
                   </p>
                   </a>
               </div>
-              <div style="
-              display:flex;
-              flex-direction:column;
-              align-items: left;">
+              <div class="popular-videos-titles">
                   <a class="underline" href="https://www.youtube.com/watch?v=50_MYpDIYiw">
                   <img class="img-pictures" src="static/picture4.webp">
+                      <div class="video-time">
+                      6:02
+                      </div>
                   <p class="titles">
                       NBA Players vs Random People, Fans, Trash Talkers(UNSEEN)
                   </p>
@@ -776,12 +892,12 @@
                   </p>
                   </a>
               </div>
-              <div style="
-              display:flex;
-              flex-direction:column;
-              align-items: left;">
+              <div class="popular-videos-titles">
                   <a class="underline" href="https://www.youtube.com/watch?v=NsblkcJIdN8">
                   <img class="img-pictures" src="static/picture5.webp">
+                      <div class="video-time">
+                      8:51
+                      </div>
                   <p class="titles">
                       LeBron James, Russell Westbrook, Carmelo Anthony & Dwight Howard First Practice For New NBA Season
                   </p>
@@ -790,12 +906,6 @@
                   </p>
                   </a>
               </div>
-
-
-
-
-
-
 
           </div>
 

@@ -1,538 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <title>Youtube</title>
+
+
+    <link rel="stylesheet" href="static/css-files/header.css">
+    <link rel="stylesheet" href="static/css-files/popular-videos-row.css">
+    <link rel="stylesheet" href="static/css-files/thumbnail-video.css">
+    <link rel="stylesheet" href="static/css-files/home-videos-shorts.css">
+    <link rel="stylesheet" href="static/css-files/picture-and-subs.css">
+    <link rel="stylesheet" href="static/css-files/left-side.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-
-  .thumbnail{
-    width: 424px;
-    border-radius: 16px;
-  }
-  .full-name{
-      font-family: Roboto, Arial;
-      font-size: 14px;
-      color: #0F0F0F;
-      font-weight: 500;
-      width: 400px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      margin-top: 5px;
-      cursor:pointer;
-
-  }
-  .header{
-      display:flex;
-      flex-direction:row;
-      width: 1519.2px;
-      position:fixed;
-      background-color: white;
-      top:0;
-      left:0;
-      right:0;
-      border-bottom-width: 1px;
-      padding-top: 8px;
-      border-bottom-width: 2px;
-      z-index:100;
-
-
-  }
-  .views{
-      font-family: Roboto, Arial;
-      font-size: 12px;
-      color: #606060;
-
-  }
-  .description,
-  .description_1,
-  .description_2{
-      font-family: Roboto, Arial;
-      font-size: 14px;
-      color: #0F0F0F;
-      line-height: 1.5;
-
-  }
-  .description_1{
-     padding-top: 8px;
-  }
-  .description_2{
-    color: #065FD4;
-    margin-top: 20px;
-    width: 400px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    cursor:pointer;
-
-  }
-  .text{
-    margin-left: 25px;
-    width: 400px;
-
-
-  }
-  .read-more{
-    font-family: Roboto, Arial;
-    font-size: 12px;
-    font-weight: 700;
-    margin-top: -11px;
-    cursor:pointer;
-  }
-  .over-videos,
-  .play_all{
-    font-family: Roboto, Arial;
-    font-size: 16px;
-    color: #0F0F0F;
-    font-weight: 500;
-    cursor:pointer;
-  }
-  .play{
-    height: 15px;
-    margin-left: 25px;
-    margin-top: 4px;
-    cursor:pointer;
-  }
-  .play-all{
-    font-weight: 500;
-    margin-left: 12px;
-    cursor:pointer;
-
-  }
-  .button{
-    height: 16px;
-    border-radius 10px;
-  }
-  .middle{
-    margin-left: 348.7px;
-    margin-top: 72px;
-    margin-right: 104.7px;
-
-
-
-  }
-  .picture{
-    display:flex;
-    flex-direction:row;
-    align-items: center;
-    position:relative;
-  }
-  .picture-column{
-    display:flex;
-    flex-direction:column;
-  }
-  .home-videos-shorts{
-    display:flex;
-    flex-direction:row;
-    align-items: center;
-    position:fixed;
-    background-color: white;
-    width: 1519.2px;
-    z-index: 100;
-
-  }
-  .video-title-description{
-      display:flex;
-      flex-direction:row;
-      width: 1070px;
-      padding-top: 72px;
-      padding-bottom: 24px;
-      position:relative;
-  }
-  .text-on-thumbnail{
-    font-family: Roboto, Arial;
-    font-size: 18px;
-    position: absolute;
-    bottom: 230px;
-    color: #EEEEEE;
-    left: 11px;
-    width: 348px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .youtube-button-thumbnail{
-    position: absolute;
-    width: 70px;
-    left: 170px;
-    bottom: 118px;
-  }
-   .popular-videos-row{
-    display:flex;
-    flex-direction:row;
-    align-items: center;
-    width: 1070px;
-
-  }
-  .popular-videos-titles{
-    display:flex;
-    flex-direction:column;
-    align-items: left;
-    position:relative;
-  }
-  .popular-videos-text{
-      display:flex;
-      flex-direction:row;
-      align-items: center;
-  }
-  .popular-videos-text-row{
-      display:flex;
-      flex-direction:column;
-  }
-  .page-left-side{
-     display:flex;
-     position:fixed;
-     flex-direction:column;
-     width: 40px;
-     padding-left: 18px;
-     padding-right: 12px;
-     top:68px;
-     left:0;
-     right:0;
-  }
-
-  .img-pictures{
-    width: 210px;
-    border-radius: 10px;
-    padding-right: 4px;
-    cursor:pointer;
-  }
-  .video-time{
-    font-family: Roboto, Arial;
-    font-size: 12px;
-    background-color: black;
-    color: white;
-    position:absolute;
-    bottom: 88px;
-    right: 9px;
-    border-radius: 5px;
-    padding: 2px 4px 2px 4px;
-
-
-  }
-  .titles{
-    font-family: Roboto, Arial;
-    font-size: 14px;
-    color: #0F0F0F;
-    font-weight: 500;
-    margin-top: 5px;
-    width: 186px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    line-height: 21px;
-    max-height: 48px;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    cursor:pointer;
-
-  }
-  .home{
-    font-family:Roboto, Arial;
-    font-size; 14px;
-    color: #606060;
-    cursor: pointer;
-    padding-right: 32px;
-    padding-left: 32px;
-
-  }
-  .home:active{
-    color: #0F0F0F;
-  }
-  .home:hover{
-    color: #0F0F0F;
-  }
-
-  .search{
-    width: 24px;
-    height: 24px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 5px;
-    cursor:pointer;
-  }
-  .profile-picture{
-    border-radius: 52px;
-    height: 80px;
-    width: 80px;
-    cursor:pointer;
-  }
-  .the-ball-game{
-    font-family: Roboto, Arial;
-    font-size: 24px;
-    padding-bottom: 2.4px;
-    padding-left: 20px;
-    color: #0F0F0F;
-    margin-top:5px ;
-  }
-  .small-ball-game,
-  .subscribers{
-    font-family: Roboto, Arial;
-    font-size: 14px;
-    color: #606060;
-    padding-left: 20px;
-    margin-top: -25px;
-  }
-  .subscribers{
-    margin-top: -12px;
-  }
-  .views-videos{
-    font-family: Roboto, Arial;
-    font-size: 12px;
-    color: #606060;
-    margin-top: -7px;
-    cursor:pointer;
-
-  }
-  .customize-channel,
-  .manage-videos{
-    margin-left: 507px;
-    height: 36px;
-    width: 160.1px;
-    background-color: rgb(3, 77, 252);
-    color: white;
-    cursor:pointer;
-    border-radius: 20px;
-    border:none;
-    font-size: 15px;
-    font-weight: 500;
-
-  }
-  .customize-channel:hover,
-  .manage-videos:hover{
-    background-color: rgb(3, 70, 252);
-  }
-  .manage-videos{
-    width: 133.75px;
-    margin-left: 3.5px;
-  }
-  .hamburger-button{
-    width: 40px;
-    height: 40px;
-    margin-left: 18px;
-    background-color: white;
-    border:none;
-  }
-  .hamburger-menu{
-    height: 24px;
-    width: 24px;
-    cursor:pointer;
-  }
-
-  .youtube-logo{
-    width: 90px;
-    height: 20px;
-    padding-left: 12px;
-    padding-right: 16px;
-    padding-top: 8px;
-    cursor:pointer;
-
-  }
-  .search-bar{
-    height: 36px;
-    width: 540px;
-    margin-top:0px;
-    border-radius: 24px;
-    border-color: rgb(192, 192, 192);
-    border-style:solid;
-    position: center;
-    margin-left: 270px;
-    border-width: 1px;
-
-   }
-  .search-bar::placeholder{
-    font-family: Roboto, Arial;
-    font-size: 16px;
-    padding-left: 14px;
-  }
-  .search-bar:focus{
-    font-family: Roboto, Arial;
-    font-size: 16px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(192, 192, 192);
-    outline:none;
-
-
-  }
-  .search-button{
-    width: 64px;
-    height: 40px;
-    margin-left: -20px;
-    background-color: white;
-    border-width: 1px;
-    border-color: rgb(192, 192, 192);
-    margin-top:0px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-style: solid;
-    cursor: pointer;
-    position:relative;
-
-  }
-  .search-button .search-black-text{
-    position: absolute;
-    bottom: -50px;
-    font-family: Roboto, Arial;
-    font-size: 12px;
-    background-color: rgb(102, 102, 102);
-    color: white;
-    border-radius: 4px;
-    padding: 8px 8px 8px 8px;
-    opacity:0;
-    pointer-events:none;
-
-  }
-  .search-button:hover .search-black-text{
-    opacity:1;
-  }
-  .search-button:hover{
-    background-color: rgb(248, 248, 248);
-  }
-  .search-image{
-    width: 24px;
-    height: 24px;
-    margin-right: 2px;
-    margin-top: 2px;
-    margin-left: 2px;
-  }
-  .speaker-button{
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-    border-radius: 20px;
-    border: none;
-    background-color: rgb(250, 250, 250);
-    cursor: pointer;
-    position: relative;
-  }
-  .speaker-button .voice-black-text{
-    position: absolute;
-    font-family: Roboto, Arial;
-    font-size: 12px;
-    bottom: -50px;
-    background-color: rgb(102, 102, 102);
-    border-radius: 4px;
-    color: white;
-    padding: 8px 8px 8px 8px;
-    opacity:0;
-    pointer-events:none;
-    white-space: nowrap;
-    left: -40px;
-  }
-  .speaker-button:hover .voice-black-text{
-    opacity: 1;
-  }
-  .speaker-icon{
-    width: 25px;
-    height: 25px;
-  }
-  .upload-icon,
-  .notification-icon{
-    width: 24px;
-    height: 24px;
-    padding: 8px 8px 8px 8px;
-    margin-left: 260px;
-    cursor: pointer;
-
-  }
-  .upload-icon:hover,
-  .notification-icon:hover,
-  .hamburger-button:hover{
-    background-color: rgb(220, 220, 220);
-    border-radius: 20px;
-  }
-  .notification-icon{
-    margin-left: 10px;
-  }
-  .right-profile-picture{
-    width: 32px;
-    height: 32px;
-    margin-left: 20px;
-    border-radius: 16px;
-    cursor:pointer;
-    margin-top: 4px;
-  }
-  .home-image,
-  .your-videos-image,
-  .history-image,
-  .movies-image,
-  .watch-later-image,
-  .music-image{
-    width: 24px;
-    height: 24px;
-    margin-right: 24px;
-
-  }
-  .home-button,
-  .library-button{
-    border:none;
-    height: 40px;
-    width: 180px;
-    display:flex;
-    flex-direction:row;
-    align-items: center;
-    background-color:white;
-    cursor:pointer;
-
-  }
-  .home-button:hover,
-  .library-button:hover{
-    border-radius: 20px;
-    background-color: rgb(240, 240, 240);
-  }
-  .home-text,
-  .history-text,
-  .your-videos-text,
-  .movies-text,
-  .watch-later-text,
-  .subs-text,
-  .music-text{
-    font-family: Roboto, Arial;
-    font-size: 14px;
-    color: #0F0F0F;
-  }
-  .library-button{
-    margin-top: 25px;
-  }
-  .your-videos-image,
-  .history-image,
-  .watch-later-image,
-  .movies-image{
-    width:20px;
-    height:20px;
-    margin-left:4px;
-  }
-
-  }
-  .movies-text{
-    margin-left: -6px;
-  }
-  .subs-text{
-    margin-left: 8px;
-    margin-top: 18px;
-  }
-  .music-image{
-    margin-left:4px;
-    border-radius:12px;
-  }
-  .music-text{
-    margin-left: -4px;
-  }
-  .underline{
-    text-decoration: none;
-    color: #0F0F0F;
-  }
-
-
-
-
-
-
-  </style>
 </head>
 <body style="margin:0px;
              padding-bottom: 1000px;">
@@ -540,7 +20,7 @@
         <div class="first-column">
             <a class="underline" href="https://www.youtube.com">
             <button class="home-button">
-                <img class="home-image" src="static/home.svg">
+                <img class="home-image" src="static/left-side-icons/home.svg">
                 <p class="home-text">Home</p>
             </button>
             </a>
@@ -548,7 +28,7 @@
         <div>
             <a class="underline" href="https://www.youtube.com/shorts">
             <button class="home-button">
-                <img class="home-image" src="static/youtube-shorts.svg">
+                <img class="home-image" src="static/left-side-icons/youtube-shorts.svg">
                 <p class="home-text">Shorts</p>
             </button>
             </a>
@@ -556,7 +36,7 @@
         <div>
             <a class="underline" href="https://www.youtube.com/feed/subscriptions">
             <button class="home-button">
-                <img class="home-image" src="static/subscriptions.svg">
+                <img class="home-image" src="static/left-side-icons/subscriptions.svg">
                 <p class="home-text">Subscriptions</p>
             </button>
             </a>
@@ -564,7 +44,7 @@
         <div>
             <a class="underline" href="https://www.youtube.com/feed/library">
             <button class="library-button">
-                <img class="home-image" src="static/library.svg">
+                <img class="home-image" src="static/left-side-icons/library.svg">
                 <p class="home-text">Library</p>
             </button>
             </a>
@@ -572,7 +52,7 @@
         <div>
             <a class="underline" href="https://www.youtube.com/feed/history">
             <button class="home-button">
-                <img class="history-image" src="static/youtube-history.svg">
+                <img class="history-image" src="static/left-side-icons/youtube-history.svg">
                 <p class="history-text">History</p>
             </button>
             </a>
@@ -580,7 +60,7 @@
         <div>
             <a class="underline" href="https://studio.youtube.com/">
             <button class="home-button">
-                <img class="your-videos-image" src="static/your-videos.jpg">
+                <img class="your-videos-image" src="static/left-side-icons/your-videos.jpg">
                 <p class="your-videos-text">Your videos</p>
             </button>
             </a>
@@ -588,22 +68,22 @@
         <div>
             <a class="underline" href="https://www.youtube.com/feed/storefront">
             <button class="home-button">
-                <img class="movies-image" src="static/your-movies.png">
-                <p class="movies-text">Your movies</p>
+                <img class="movies-image" src="static/left-side-icons/your-movies.png">
+                <p class="your-movies-text">Your movies</p>
             </button>
             </a>
         </div>
         <div>
             <a class="underline" href="https://www.youtube.com/playlist">
             <button class="home-button">
-                <img class="watch-later-image" src="static/watch-later.png">
+                <img class="watch-later-image" src="static/left-side-icons/watch-later.png">
                 <p class="watch-later-text">Watch later</p>
             </button>
             </a>
         </div>
         <div>
             <button class="home-button">
-                <img class="home-image" src="static/down.svg">
+                <img class="home-image" src="static/left-side-icons/down.svg">
                 <p class="home-text">Show more</p>
             </button>
         </div>
@@ -613,7 +93,7 @@
         <div>
             <a class="underline" href="https://www.youtube.com/music">
             <button class="home-button">
-                <img class="music-image" src="static/youtube-music.jpg">
+                <img class="music-image" src="static/left-side-icons/youtube-music.jpg">
                 <p class="music-text">Music</p>
             </button>
             </a>
@@ -621,7 +101,7 @@
         <div>
             <a class="underline" href="https://www.youtube.com/sports">
             <button class="home-button">
-                <img class="music-image" src="static/sports.jpg">
+                <img class="music-image" src="static/left-side-icons/sports.jpg">
                 <p class="music-text">Sports</p>
             </button>
             </a>
@@ -629,7 +109,7 @@
         <div>
             <a class="underline" href="https://www.youtube.com/gaming">
             <button class="home-button">
-                <img class="music-image" src="static/gaming.jpg">
+                <img class="music-image" src="static/left-side-icons/gaming.jpg">
                 <p class="music-text">Gaming</p>
             </button>
             </a>
@@ -637,7 +117,7 @@
         <div>
             <a class="underline" href="https://www.youtube.com/movies">
             <button class="home-button">
-                <img class="music-image" src="static/movies.jpg">
+                <img class="music-image" src="static/left-side-icons/movies.jpg">
                 <p class="music-text">Movies</p>
             </button>
             </a>
@@ -650,13 +130,13 @@
     <div class="header">
             <div style="background-color: white;">
                 <button class="hamburger-button">
-                    <img class="hamburger-menu" src="static/hamburger-menu.svg">
+                    <img class="hamburger-menu" src="static/header-icons/hamburger-menu.svg">
                 </button>
 
             </div>
             <div>
                 <a href="https://www.youtube.com/c/theballgame">
-                <img class="youtube-logo" src="static/youtube-logo.svg">
+                <img class="youtube-logo" src="static/header-icons/youtube-logo.svg">
                 </a>
             </div>
             <div>
@@ -664,7 +144,7 @@
             </div>
             <div>
                 <button class="search-button">
-                    <img class="search-image" src="static/search.svg">
+                    <img class="search-image" src="static/header-icons/search.svg">
                     <div class="search-black-text">
                         Search
                     </div>
@@ -672,28 +152,28 @@
             </div>
             <div>
                 <button class="speaker-button">
-                    <img class="speaker-icon" src="static/voice-search-icon.svg">
+                    <img class="speaker-icon" src="static/header-icons/voice-search-icon.svg">
                     <div class="voice-black-text">
                         Search with your voice
                     </div>
                 </button>
             </div>
             <div>
-                <img class="upload-icon" src="static/upload.svg">
+                <img class="upload-icon" src="static/header-icons/upload.svg">
 
             </div>
             <div>
-                <img class="notification-icon" src="static/notifications.svg">
+                <img class="notification-icon" src="static/header-icons/notifications.svg">
             </div>
             <div>
-                <img class="right-profile-picture" src="/static/profile-picture.jpg">
+                <img class="right-profile-picture" src="/static/header-icons/profile-picture.jpg">
             </div>
 
     </div>
     <div class="middle">
       <div class="picture">
           <div>
-              <img class="profile-picture" src="static/channels-profile.jpg">
+              <img class="profile-picture" src="static/profile-picture/channels-profile.jpg">
           </div>
           <div class="picture-column">
               <p class="the-ball-game">
@@ -759,20 +239,20 @@
             </a>
         </div>
         <div>
-            <img class="search" src="static/search.svg">
+            <img class="search" src="static/header-icons/search.svg">
         </div>
 
 
       </div>
       <div class="video-title-description">
         <div>
-          <img class="thumbnail" src="static/thumbnail.webp">
+          <img class="thumbnail" src="static/thumbnail/thumbnail.webp">
             <a class="underline" href="https://www.youtube.com/watch?v=IiEzjbbB7_8">
             <div class="text-on-thumbnail">
                 Robert Williams III of Boston Celtics IS FULLY BACK & PREPARED To Make
             </div>
             <div>
-                <img class="youtube-button-thumbnail" src="static/youtube-button-thumbnail.png">
+                <img class="youtube-button-thumbnail" src="static/thumbnail/youtube-button-thumbnail.png">
             </div>
             </a>
         </div>
@@ -822,7 +302,7 @@
               </p>
               </a>
               <div>
-                      <img class="play" src="static/play.png">
+                      <img class="play" src="static/popular-videos-thumbnails/play.png">
               </div>
               <div>
                   <a class="underline" href="https://www.youtube.com/watch?v=a0y13k6_dU8&list=UULPk3furvO93kRcIWm4mo-kkg">
@@ -835,7 +315,7 @@
           <div class="popular-videos-row">
               <div class="popular-videos-titles">
                   <a class="underline" href="https://www.youtube.com/watch?v=a0y13k6_dU8">
-                  <img class="img-pictures" src="static/picture1.webp">
+                  <img class="img-pictures" src="static/popular-videos-thumbnails/picture1.webp">
                   <div class="video-time">
                       7:48
                   </div>
@@ -852,7 +332,7 @@
               </div>
               <div class="popular-videos-titles">
                   <a class="underline" href="https://www.youtube.com/watch?v=L3r6URIyFgo">
-                  <img class="img-pictures" src="static/picture2.webp">
+                  <img class="img-pictures" src="static/popular-videos-thumbnails/picture2.webp">
                       <div class="video-time">
                       8:04
                       </div>
@@ -866,7 +346,7 @@
               </div>
               <div class="popular-videos-titles">
                   <a class="underline" href="https://www.youtube.com/watch?v=DZGIuVcblG4">
-                  <img class="img-pictures" src="static/picture3.webp">
+                  <img class="img-pictures" src="static/popular-videos-thumbnails/picture3.webp">
                       <div class="video-time">
                       6:04
                       </div>
@@ -880,7 +360,7 @@
               </div>
               <div class="popular-videos-titles">
                   <a class="underline" href="https://www.youtube.com/watch?v=50_MYpDIYiw">
-                  <img class="img-pictures" src="static/picture4.webp">
+                  <img class="img-pictures" src="static/popular-videos-thumbnails/picture4.webp">
                       <div class="video-time">
                       6:02
                       </div>
@@ -894,7 +374,7 @@
               </div>
               <div class="popular-videos-titles">
                   <a class="underline" href="https://www.youtube.com/watch?v=NsblkcJIdN8">
-                  <img class="img-pictures" src="static/picture5.webp">
+                  <img class="img-pictures" src="static/popular-videos-thumbnails/picture5.webp">
                       <div class="video-time">
                       8:51
                       </div>
